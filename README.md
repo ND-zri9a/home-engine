@@ -10,7 +10,8 @@
 
 ### 1. The Shopping Trip (Restocking)
 **Goal:** Update your fridge and track your spending.
-- **INPUT:** You send a **Photo** of a supermarket receipt (e.g., Marjane/Carrefour).
+- **INPUT (CRITICAL & MANDATORY):** You send a **Photo** of a supermarket receipt OR a text message with *exact* details.
+  - *Rule:* If Price, Quantity, or Unit is missing, I **MUST** ask you for it. I cannot guess.
 - **PROCESS:**
   1. **Vision/Parsing:** I scan the image to extract Store Name, Date, Line Items, and Prices.
   2. **Normalization:** I convert units (e.g., "1 KG" -> `1000g`) and match items to the database ID.
@@ -23,9 +24,10 @@
 
 ### 2. The Cooking Session (Consumption)
 **Goal:** Cook a meal and automatically update inventory.
-- **INPUT:** "Guide me step-by-step through the Beef Tagine."
+- **INPUT (CRITICAL):** "Guide me step-by-step through the Beef Tagine."
 - **PROCESS:**
   1. **Availability Check:** I verify you have enough ingredients (e.g., 500g Beef, 2 Onions).
+     - *Stop Condition:* If ingredients are missing, I **halt** and ask if you bought them or want to substitute.
   2. **Guidance Loop:** I serve one instruction at a time from `recipe_steps`.
   3. **Completion Trigger:** On "Done", I execute a **Consumption Transaction**.
   4. **Deduction:**
