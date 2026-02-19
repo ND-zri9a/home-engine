@@ -1,4 +1,4 @@
-# 🗃️ Database Requirement Questions
+# 🗃️ Database Requirement Questions (Updated Phase 2)
 > This file tracks every question the user has explicitly asked the Home Engine database to answer. It serves as the "Requirement History" for the system's capabilities.
 
 ## 💰 Finance & Banking
@@ -9,6 +9,7 @@
 - "How much this ingredient costed me?"
 - "How many invoice did i share with you?"
 - "What services did i pay subscription for and does when do i need to pay them again and how much they cost?"
+- **"Is the price of [Item] rising? Should I bulk buy now?" (Inflation Tracking)**
 
 ## 🧊 Inventory & Consumption
 - "What i have in the fridge?"
@@ -16,6 +17,8 @@
 - "Base on my consumation what are the most ingrdient that i consume a lot and how much (Gram/litre/pack/etc...) Should i buy?"
 - "Hey im in the suppermarket what is needed to buy that not in home from what i coock a lot on a daily baisis?"
 - "What is my consumentation stats and Spending stats?"
+- **"What ingredients do I buy often but rarely actually cook with?" (Waste Analysis)**
+- **"What is going to go bad in the next 3 days?" (Expiry Alert)**
 
 ## 🥘 Recipes & Cooking Flow
 - "Can you guide me into coocking this recipe?"
@@ -26,6 +29,8 @@
 - "Did i coock last friday or last monday and what time did i coock it and how much time it took me to coock it?"
 - "What do you recipe do i eat a lot?"
 - "Can you search for a neww recipe that close to the recipe that i eat a lot?"
+- **"I only have 20 minutes to cook. What recipes fit this timeframe using what I have?" (Efficiency)**
 
 ## 📦 Nutrition (Atomic Macros)
 - "Howw much Protein in this recipe?"
+- **"I need 50g more protein today. What single ingredient or snack in my fridge solves this?" (Goal Seeking)**
